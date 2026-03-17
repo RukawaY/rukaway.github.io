@@ -8,4 +8,4 @@ role: "Research Intern"
 company: "State Key Lab of CAD&CG, Zhejiang University"
 end_date: 
 ---
-I am currently a research intern at ZJU3DV, State Key Lab of CAD&CG, Zhejiang University.
+Work as a research intern at ZJU3DV, State Key Lab of CAD&CG, Zhejiang University, focusing on Embodied Simulation, 3D Reconstruction and 3D/4D Gaussian Splatting.
