@@ -94,6 +94,16 @@ h1 {
 
 }
 
+.intro-title,
+.intro-email,
+.intro-links {
+  white-space: nowrap;
+}
+
+.intro-photo-image {
+  display: block;
+}
+
 .one {
   width: 160px;
   height: 160px;
@@ -123,3 +133,40 @@ span.highlight {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 //@import "highlights";
 //@import "svg-icons";
+
+@media (max-width: 680px) {
+  .intro-row,
+  .intro-text,
+  .intro-photo {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .intro-text {
+    padding-bottom: 0 !important;
+  }
+
+  .intro-photo {
+    padding-top: 12px !important;
+    text-align: center;
+  }
+
+  .intro-photo-image {
+    width: min(72vw, 320px) !important;
+    margin: 0 auto;
+  }
+
+  .intro-title {
+    font-size: clamp(28px, 7.2vw, 39px);
+  }
+
+  .intro-email {
+    font-size: clamp(15px, 4.3vw, 18px) !important;
+    margin-bottom: 22px !important;
+  }
+
+  .intro-links {
+    font-size: clamp(12px, 3.8vw, 16px);
+  }
+}
