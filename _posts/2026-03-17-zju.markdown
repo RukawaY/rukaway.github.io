@@ -1,11 +1,12 @@
 ---
 layout: post
-title:  "Research Intern at ZJU3DV"
-date:   2025-02-15 12:00:00 +00:00
+title:  "Zhejiang University"
+date:   2023-08-24 12:00:00 +00:00
 image: /images/zju.png
 categories: experiences
-role: "Research Intern"
-company: "State Key Lab of CAD&CG, Zhejiang University"
+role: "Bachelor of Software Engineering"
+company: "Zhejiang University"
 end_date: 
 ---
-Work as a research intern at ZJU3DV, State Key Lab of CAD&CG, Zhejiang University, focusing on Embodied Simulation, 3D Reconstruction and 3D/4D Gaussian Splatting.
+**GPA**: 93.64/100 &nbsp; **Ranking**: 1/69 <br>
+I also work as a research intern at ZJU3DV, State Key Lab of CAD&CG, Zhejiang University, focusing on Embodied Simulation and 3D/4D Computer Vision.
