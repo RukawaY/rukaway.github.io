@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>法律文档修改</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+
+<body>
+  <main class="page-shell">
+    <nav class="top-nav" aria-label="页面导航">
+      <div class="brand-mark" aria-hidden="true"></div>
+      <strong>法律文档修改</strong>
+      <span>Word 审阅工具</span>
+    </nav>
+
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">ziyuan-xia.com/test</p>
+        <h1>AI 审阅修改法律文档</h1>
+      </div>
+      <p class="header-note">上传 Word，描述修改要求，逐处确认差异后导出原格式文档。</p>
+    </header>
+
+    <section class="workspace" aria-label="法律文档修改工作区">
+      <aside class="control-panel">
+        <form id="revision-form" class="revision-form">
+          <div class="field-group">
+            <label for="docx-file">Word 文档</label>
+            <label class="drop-zone" id="drop-zone">
+              <input id="docx-file" name="docx-file" type="file" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+              <span class="drop-title">选择或拖入 .docx 文件</span>
+              <span class="drop-detail" id="file-detail">尚未选择文件</span>
+            </label>
+          </div>
+
+          <div class="field-group">
+            <label for="instruction">修改要求</label>
+            <textarea id="instruction" name="instruction" rows="6" placeholder="例如：把债权申报表的债权事实与理由部分写得更详细些"></textarea>
+          </div>
+
+          <div class="field-group api-field">
+            <label for="api-key">DeepSeek API Key</label>
+            <input id="api-key" name="api-key" type="password" autocomplete="off" placeholder="sk-...">
+          </div>
+
+          <button id="run-button" class="primary-button" type="submit">生成修改建议</button>
+        </form>
+
+        <div class="status-panel" aria-live="polite">
+          <div class="status-line">
+            <span class="status-label">文档状态</span>
+            <strong id="parse-status">等待上传</strong>
+          </div>
+          <div class="status-line">
+            <span class="status-label">建议状态</span>
+            <strong id="ai-status">未开始</strong>
+          </div>
+          <div class="progress-panel" id="progress-panel" hidden>
+            <div class="progress-head">
+              <span id="progress-label">准备生成</span>
+              <strong id="progress-percent">0%</strong>
+            </div>
+            <div class="progress-track" aria-hidden="true">
+              <span id="progress-fill"></span>
+            </div>
+          </div>
+          <div class="doc-stats" id="doc-stats"></div>
+        </div>
+      </aside>
+
+      <section class="review-panel">
+        <div class="review-toolbar">
+          <div>
+            <p class="eyebrow">差异审核</p>
+            <h2 id="review-title">暂无修改建议</h2>
+          </div>
+          <div class="toolbar-actions">
+            <button id="accept-all" class="secondary-button keep-button" type="button" disabled>全部保留</button>
+            <button id="reject-all" class="secondary-button discard-button" type="button" disabled>全部抛弃</button>
+            <button id="export-button" class="primary-button" type="button" disabled>输出 Word</button>
+          </div>
+        </div>
+
+        <div id="empty-state" class="empty-state">
+          <p>上传文档并分析后，这里会显示逐段的修改建议。<br>每一处修改都可以单独保留或抛弃。</p>
+        </div>
+
+        <div id="diff-list" class="diff-list"></div>
+      </section>
+    </section>
+  </main>
+</body>
+
+</html>
