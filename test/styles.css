@@ -84,7 +84,8 @@ button:disabled {
 .top-nav {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: space-between;
+  gap: 22px;
   min-height: 54px;
   margin-bottom: 18px;
   padding: 0 2px;
@@ -92,15 +93,41 @@ button:disabled {
   font-family: var(--font);
 }
 
+.nav-brand {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 12px;
+}
+
 .top-nav strong {
   color: var(--ink);
   font-size: 18px;
   font-weight: 700;
+  white-space: nowrap;
 }
 
-.top-nav span {
+.nav-brand span {
   padding-left: 12px;
   border-left: 1px solid var(--line-strong);
+  white-space: nowrap;
+}
+
+.nav-quote {
+  max-width: 520px;
+  margin: 0;
+  color: #514d46;
+  font-family: "Tiempos Text", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.45;
+  text-align: right;
+}
+
+.nav-quote cite {
+  color: var(--muted);
+  font-style: normal;
 }
 
 .brand-mark {
@@ -124,7 +151,7 @@ button:disabled {
 
 .app-header {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 440px);
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 620px);
   gap: 40px;
   align-items: end;
   margin-bottom: 28px;
@@ -157,11 +184,18 @@ button:disabled {
   text-transform: uppercase;
 }
 
+.site-link {
+  text-transform: none;
+  font-size: 20px;
+}
+
 .header-note {
+  justify-self: end;
   margin: 0 0 8px;
   color: var(--muted);
   font-size: clamp(22px, 2vw, 30px);
   line-height: 1.35;
+  text-align: right;
 }
 
 .workspace {
@@ -664,11 +698,19 @@ input[type="password"]:focus {
   }
 
   .top-nav {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
     margin-bottom: 22px;
   }
 
-  .top-nav span {
+  .nav-brand span {
     display: none;
+  }
+
+  .nav-quote {
+    max-width: 100%;
+    text-align: left;
   }
 
   .app-header,
