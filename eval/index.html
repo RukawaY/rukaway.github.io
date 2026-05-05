@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>场景渲染质量人工评估</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script>
+    // Cross-origin API base. The static frontend is hosted on
+    // ziyuan-xia.com/eval/ via GitHub Pages and talks to a Cloudflare quick
+    // tunnel that forwards to the intranet Flask backend at 10.76.5.241:8000.
+    // Quick-tunnel hostnames change on every cloudflared restart -- update
+    // this string when the tunnel is recycled (or migrate to a named tunnel
+    // bound to a stable subdomain like eval-api.ziyuan-xia.com).
+    window.__VLM_API_BASE__ = "https://tomorrow-occurred-myspace-lightning.trycloudflare.com";
+  </script>
+</head>
+<body>
+  <main id="app">
+    <!-- ============================ CONSENT ============================ -->
+    <section id="view-consent" class="view">
+      <header class="brand">
+        <h1>场景渲染质量评估</h1>
+        <p class="subtitle">模拟器场景渲染图的盲评调查。</p>
+      </header>
+
+      <article class="card">
+        <h2>欢迎参与</h2>
+        <p>
+          您将看到 60 张室内 / 室外场景渲染图，分为 10 批，每批 6 张。
+          请在每一批内，按下列三个维度对 6 张图片<strong>从最好到最差排序</strong>
+          （第 1 名最好，第 6 名最差）：
+        </p>
+        <ul class="dim-list">
+          <li><strong>渲染质量</strong>&mdash;&mdash;视觉质量，是否清晰，是否存在模糊、伪影。</li>
+          <li><strong>真实性</strong>&mdash;&mdash;与您印象中真实照片的相似程度。</li>
+          <li><strong>场景多样性</strong>&mdash;&mdash;与同批次其它图片相比，该图片在场景类型、物体种类等方面的丰富程度。</li>
+        </ul>
+        <p>
+          整个评估约需 10&ndash;15 分钟。同一浏览器可随时暂停并继续。
+        </p>
+
+        <h2>参与者信息</h2>
+        <form id="consent-form" novalidate>
+          <label class="field">
+            <span>真实姓名</span>
+            <input
+              type="text" id="name-input" name="name" required
+              maxlength="64" autocomplete="name"
+              placeholder="例如：张三"
+            />
+          </label>
+
+          <label class="checkbox">
+            <input type="checkbox" id="consent-input" required />
+            <span>
+              我确认上方填写的是本人真实姓名，并同意我的排序结果
+              <strong>仅用于本论文相关的学术研究</strong>。
+              本研究不会收集任何其它个人信息，或用于其他任何用途。
+            </span>
+          </label>
+
+          <button type="submit" id="consent-submit" class="btn primary">
+            开始评估
+          </button>
+          <p class="error" id="consent-error" hidden></p>
+        </form>
+      </article>
+    </section>
+
+    <!-- ============================ EVAL =============================== -->
+    <section id="view-eval" class="view" hidden>
+      <header class="eval-header">
+        <div class="eval-header-top">
+          <div class="batch-title" id="batch-title">第 1 / 10 批</div>
+          <div class="batch-status" id="batch-status">已完成 0 / 10 批</div>
+        </div>
+        <div class="progress-bar"><div id="progress-fill"></div></div>
+        <p class="eval-tip" id="eval-tip">
+          请将下方 6 张图片在每个维度内从最好到最差排序。点击下方
+          排序按钮可锁定名次，再点击图片即可填入。
+        </p>
+      </header>
+
+      <div class="eval-body">
+        <!-- LEFT: 3 rows × 2 cols image grid -->
+        <div id="image-grid" class="image-grid"></div>
+
+        <!-- RIGHT: 3 dimension columns + inline legend below them -->
+        <div class="eval-side">
+          <div id="rank-cols" class="rank-cols"></div>
+
+          <p class="dim-explain-inline">
+            <span><strong>渲染质量</strong>：视觉质量，是否存在碎片、模糊、伪影等。</span>
+            <span><strong>真实性</strong>：与真实照片的相似程度，光照、材质、阴影、空间感是否自然。</span>
+            <span><strong>场景多样性</strong>：相对本批其它图片，场景类型、物体种类、空间结构等的丰富程度。</span>
+          </p>
+        </div>
+      </div>
+
+      <footer class="eval-footer">
+        <p class="error" id="eval-error" hidden></p>
+        <button id="next-batch-btn" class="btn primary" disabled>
+          提交并进入下一批
+        </button>
+      </footer>
+    </section>
+
+    <!-- ============================ DONE =============================== -->
+    <section id="view-done" class="view" hidden>
+      <article class="card done-card">
+        <h1>感谢您的参与</h1>
+        <p>
+          您已完成全部 10 批排序，结果已保存到后端。您的反馈将帮助我们更可靠
+          地评估两套场景渲染方案的视觉真实感。
+        </p>
+        <p class="muted">您可以关闭本页面。</p>
+        <button id="restart-btn" class="link">开始新的参与者评估</button>
+      </article>
+    </section>
+
+    <!-- ====================== Image card template ===================== -->
+    <template id="card-template">
+      <article class="img-card" data-token="" data-pos="">
+        <div class="image-wrap">
+          <img alt="待评估的场景渲染图" loading="lazy" />
+          <div class="img-rank-badges">
+            <span class="rank-badge" data-dim="quality"   title="渲染质量当前排名"></span>
+            <span class="rank-badge" data-dim="realism"   title="真实性当前排名"></span>
+            <span class="rank-badge" data-dim="diversity" title="场景多样性当前排名"></span>
+          </div>
+        </div>
+        <div class="img-pos">
+          <span class="img-pos-circle"></span>
+        </div>
+      </article>
+    </template>
+
+    <!-- ====================== Rank column template ===================== -->
+    <template id="rank-col-template">
+      <div class="rank-col" data-dim="">
+        <div class="rank-col-head">
+          <span class="rank-col-label"></span>
+        </div>
+        <div class="rank-slots"></div>
+        <button type="button" class="rank-clear link" title="清空本列排序">
+          清空
+        </button>
+      </div>
+    </template>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
