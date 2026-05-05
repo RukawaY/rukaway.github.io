@@ -121,6 +121,7 @@ function applyState(s) {
   state.currentBatchIdx  = s.current_batch_idx ?? 0;
   state.items            = (s.current_batch_items || []).slice()
                               .sort((a, b) => a.item_idx - b.item_idx);
+  state.nextItems        = (s.next_batch_items || []).slice();
 
   // Initialise ranking arrays from server (resume support).
   for (const d of DIMENSIONS) {
@@ -131,6 +132,22 @@ function applyState(s) {
   }
   state.armed = null;
   state.recentToken = null;
+}
+
+// Kick off background fetches for the *next* batch's images so they're warm
+// in the browser cache by the time the user clicks "next batch". We just
+// instantiate Image objects -- the browser fetches and decodes, and the
+// resulting bytes sit in the HTTP cache (Cache-Control: private, max-age).
+const _preloadedTokens = new Set();
+function preloadNextBatch() {
+  if (!Array.isArray(state.nextItems)) return;
+  for (const it of state.nextItems) {
+    if (_preloadedTokens.has(it.token)) continue;
+    _preloadedTokens.add(it.token);
+    const img = new Image();
+    img.decoding = "async";
+    img.src = apiUrl(`/api/img/${it.token}`);
+  }
 }
 
 function isRowComplete(dim) {
@@ -198,6 +215,8 @@ function renderBatch() {
 
   if (!state.armed) autoArm();
   refreshAllUI();
+  // Warm the cache for the upcoming batch.
+  preloadNextBatch();
 }
 
 function refreshAllUI() {
