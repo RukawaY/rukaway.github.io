@@ -10,16 +10,12 @@ const API_BASE = (
 function apiUrl(path) { return API_BASE + path; }
 
 const STORAGE_KEY = "vlm-eval-session-id";
-const DIMENSIONS = ["quality", "realism", "diversity"];
+const DIMENSIONS = ["realism"];
 const DIM_LABELS = {
-  quality:   "渲染质量",
-  realism:   "真实性",
-  diversity: "场景多样性",
+  realism: "真实性",
 };
 const DIM_HINTS = {
-  quality:   "清晰度、是否存在伪影 / 模糊",
-  realism:   "与真实照片的相似程度",
-  diversity: "相对同批，场景与物体的丰富程度",
+  realism: "与真实照片的相似程度",
 };
 
 const views = {
@@ -53,7 +49,7 @@ const state = {
   // Each: { token, item_idx }
   items: [],
   // rankings[dim] = array of length BATCH_SIZE; each entry is a token or null.
-  rankings: { quality: [], realism: [], diversity: [] },
+  rankings: { realism: [] },
   // The currently armed slot (next click on an image fills it). Null if no
   // slot is armed. { dim: 'quality', rankIdx: 0 } means rank 1 of quality.
   armed: null,
@@ -219,7 +215,7 @@ function refreshAllUI() {
       ` 也可点击其它名次的方块来调整。`;
   } else if (isAllComplete()) {
     evalTip.innerHTML =
-      `本批所有维度已排序完成，确认无误后点击右下方<strong>"提交并进入下一批"</strong>。`;
+      `本批已排序完成，确认无误后点击右下方<strong>"提交并进入下一批"</strong>。`;
   } else {
     evalTip.textContent = "请选择一个名次方块，再点击图片完成排序。";
   }

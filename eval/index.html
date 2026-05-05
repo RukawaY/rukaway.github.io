@@ -28,16 +28,14 @@
         <h2>欢迎参与</h2>
         <p>
           您将看到 60 张室内 / 室外场景渲染图，分为 10 批，每批 6 张。
-          请在每一批内，按下列三个维度对 6 张图片<strong>从最好到最差排序</strong>
-          （第 1 名最好，第 6 名最差）：
+          请在每一批内，按<strong>真实性</strong>这一维度对 6 张图片
+          <strong>从最好到最差排序</strong>（第 1 名最好，第 6 名最差）。
         </p>
         <ul class="dim-list">
-          <li><strong>渲染质量</strong>&mdash;&mdash;视觉质量，是否清晰，是否存在模糊、伪影。</li>
-          <li><strong>真实性</strong>&mdash;&mdash;与您印象中真实照片的相似程度。</li>
-          <li><strong>场景多样性</strong>&mdash;&mdash;与同批次其它图片相比，该图片在场景类型、物体种类等方面的丰富程度。</li>
+          <li><strong>真实性</strong>&mdash;&mdash;与您印象中真实照片的相似程度，光照、材质、阴影、空间感是否自然。</li>
         </ul>
         <p>
-          整个评估约需 10&ndash;15 分钟。同一浏览器可随时暂停并继续。
+          整个评估约需 5&ndash;10 分钟。同一浏览器可随时暂停并继续。
         </p>
 
         <h2>参与者信息</h2>
@@ -77,7 +75,7 @@
         </div>
         <div class="progress-bar"><div id="progress-fill"></div></div>
         <p class="eval-tip" id="eval-tip">
-          请将下方 6 张图片在每个维度内从最好到最差排序。点击下方
+          请将下方 6 张图片按<strong>真实性</strong>从最好到最差排序。点击下方
           排序按钮可锁定名次，再点击图片即可填入。
         </p>
       </header>
@@ -91,9 +89,7 @@
           <div id="rank-cols" class="rank-cols"></div>
 
           <p class="dim-explain-inline">
-            <span><strong>渲染质量</strong>：视觉质量，是否存在碎片、模糊、伪影等。</span>
             <span><strong>真实性</strong>：与真实照片的相似程度，光照、材质、阴影、空间感是否自然。</span>
-            <span><strong>场景多样性</strong>：相对本批其它图片，场景类型、物体种类、空间结构等的丰富程度。</span>
           </p>
         </div>
       </div>
@@ -111,8 +107,8 @@
       <article class="card done-card">
         <h1>感谢您的参与</h1>
         <p>
-          您已完成全部 10 批排序，结果已保存到后端。您的反馈将帮助我们更可靠
-          地评估两套场景渲染方案的视觉真实感。
+          您已完成全部 10 批的真实性排序，结果已保存到后端。您的反馈将帮助
+          我们更可靠地评估两套场景渲染方案的视觉真实感。
         </p>
         <p class="muted">您可以关闭本页面。</p>
         <button id="restart-btn" class="link">开始新的参与者评估</button>
@@ -125,9 +121,7 @@
         <div class="image-wrap">
           <img alt="待评估的场景渲染图" loading="lazy" />
           <div class="img-rank-badges">
-            <span class="rank-badge" data-dim="quality"   title="渲染质量当前排名"></span>
             <span class="rank-badge" data-dim="realism"   title="真实性当前排名"></span>
-            <span class="rank-badge" data-dim="diversity" title="场景多样性当前排名"></span>
           </div>
         </div>
         <div class="img-pos">

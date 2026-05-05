@@ -185,7 +185,7 @@ main:has(#view-eval:not([hidden])) {
   display: grid;
   /* Left flexes to fill, right is a fixed-width sidebar so the rank panel
      stays compact and the image grid takes most of the room. */
-  grid-template-columns: minmax(0, 1fr) 360px;
+  grid-template-columns: minmax(0, 1fr) 216px;
   gap: 28px;
   margin-bottom: 18px;
 }
@@ -290,12 +290,13 @@ main:has(#view-eval:not([hidden])) {
 }
 
 /* ===========================================================================
- * Rank panel — three vertical columns side by side
+ * Rank panel — vertical columns side by side (one per dimension)
  * ======================================================================== */
 
 .rank-cols {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
   gap: 10px;
   background: var(--surface);
   border: 1px solid var(--border);
