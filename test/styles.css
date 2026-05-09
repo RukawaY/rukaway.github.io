@@ -166,8 +166,8 @@ button:disabled {
 
 .app-header h1 {
   max-width: none;
-  font-size: clamp(42px, 5vw, 72px);
-  line-height: 0.95;
+  font-size: clamp(32px, 3.6vw, 52px);
+  line-height: 1;
   white-space: nowrap;
 }
 
@@ -193,8 +193,8 @@ button:disabled {
   justify-self: end;
   margin: 0 0 8px;
   color: var(--muted);
-  font-size: clamp(22px, 2vw, 30px);
-  line-height: 1.35;
+  font-size: clamp(15px, 1.4vw, 20px);
+  line-height: 1.45;
   text-align: right;
 }
 
@@ -305,9 +305,9 @@ input[type="password"] {
 }
 
 textarea {
-  min-height: 115px;
-  padding: 13px 14px;
-  line-height: 1.65;
+  min-height: 72px;
+  padding: 10px 14px;
+  line-height: 1.6;
   resize: vertical;
 }
 
@@ -417,6 +417,52 @@ input[type="password"]:focus {
   color: var(--brown-text);
 }
 
+.mode-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.mode-button {
+  display: grid;
+  gap: 4px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-strong);
+  color: var(--ink);
+  text-align: left;
+  transition: border-color 160ms ease, background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.mode-button:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-1px);
+}
+
+.mode-button.is-active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  box-shadow: 0 4px 14px rgba(198, 95, 61, 0.12);
+}
+
+.mode-button .mode-name {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.mode-button .mode-detail {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.mode-button.is-active .mode-detail {
+  color: var(--accent-dark);
+}
+
 .status-panel {
   display: grid;
   gap: 12px;
@@ -479,6 +525,11 @@ input[type="password"]:focus {
   line-height: 1.55;
 }
 
+.doc-stats:empty {
+  min-height: 0;
+  margin: 0;
+}
+
 .review-toolbar {
   display: flex;
   align-items: center;
@@ -492,8 +543,83 @@ input[type="password"]:focus {
 .toolbar-actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: end;
   gap: 10px;
+}
+
+.export-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding-left: 16px;
+  margin-left: 6px;
+  border-left: 1px solid var(--line);
+}
+
+.export-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-strong);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 160ms ease, background 160ms ease, color 160ms ease;
+}
+
+.export-checkbox:hover {
+  border-color: var(--line-strong);
+}
+
+.export-checkbox input {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.export-checkbox.is-active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+}
+
+.export-checkbox.is-locked {
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+.export-checkbox.is-locked input {
+  cursor: not-allowed;
+}
+
+.pdf-mode-notice {
+  margin: 0 18px 6px;
+  padding: 10px 14px;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.diff-line.plain {
+  background: #f7eedc;
+}
+
+.diff-line.plain .diff-mark,
+.diff-line.plain .diff-text {
+  color: #7a5a2e;
 }
 
 .empty-state {
@@ -661,7 +787,7 @@ input[type="password"]:focus {
 }
 
 .message {
-  margin-top: 12px;
+  margin-top: 0;
   padding: 12px 14px;
   border: 1px solid var(--line);
   border-radius: var(--radius);

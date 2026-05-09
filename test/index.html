@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="stylesheet" href="./styles.css">
   <script defer src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/legacy/build/pdf.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
   <script defer src="./app.js"></script>
 </head>
 
@@ -18,7 +20,7 @@
       <div class="nav-brand">
         <div class="brand-mark" aria-hidden="true"></div>
         <strong>法律文档修改</strong>
-        <span>Word 审阅工具</span>
+        <span>Word / PDF 审阅工具</span>
       </div>
       <p class="nav-quote">"Where the law ends, tyranny begins." <cite>— John Locke</cite></p>
     </nav>
@@ -28,24 +30,39 @@
         <p class="eyebrow site-link">ziyuan-xia.com/test</p>
         <h1>AI 审阅修改法律文档</h1>
       </div>
-      <p class="header-note">上传 Word，描述修改要求，<br>逐处确认差异后导出原格式文档。</p>
+      <p class="header-note">上传 Word 或 PDF，描述修改要求，<br>逐项确认 AI 建议后导出文档。</p>
     </header>
 
     <section class="workspace" aria-label="法律文档修改工作区">
       <aside class="control-panel">
         <form id="revision-form" class="revision-form">
           <div class="field-group">
-            <label for="docx-file">Word 文档</label>
+            <label for="docx-file">上传文档</label>
             <label class="drop-zone" id="drop-zone">
-              <input id="docx-file" name="docx-file" type="file" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
-              <span class="drop-title">选择或拖入 .docx 文件</span>
+              <input id="docx-file" name="docx-file" type="file"
+                accept=".pdf,.docx,.doc,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword">
+              <span class="drop-title">选择或拖入 .docx / .doc / .pdf 文件</span>
               <span class="drop-detail" id="file-detail">尚未选择文件</span>
             </label>
           </div>
 
           <div class="field-group">
             <label for="instruction">修改要求</label>
-            <textarea id="instruction" name="instruction" rows="6" placeholder="例如：把债权申报表的债权事实与理由部分写得更详细些"></textarea>
+            <textarea id="instruction" name="instruction" rows="5" placeholder="例如：把债权申报表的债权事实与理由部分写得更详细些"></textarea>
+          </div>
+
+          <div class="field-group mode-group">
+            <label>调用模式</label>
+            <div class="mode-selector" role="group" aria-label="选择调用模式">
+              <button type="button" class="mode-button is-active" data-mode="quick" aria-pressed="true">
+                <span class="mode-name">快速模式</span>
+                <span class="mode-detail">适合简单任务 · 快速生成</span>
+              </button>
+              <button type="button" class="mode-button" data-mode="expert" aria-pressed="false">
+                <span class="mode-name">专家模式</span>
+                <span class="mode-detail">适合复杂文档 · 深度分析</span>
+              </button>
+            </div>
           </div>
 
           <div class="field-group api-field">
@@ -62,7 +79,7 @@
             <strong id="parse-status">等待上传</strong>
           </div>
           <div class="status-line">
-            <span class="status-label">建议状态</span>
+            <span class="status-label">生成状态</span>
             <strong id="ai-status">未开始</strong>
           </div>
           <div class="progress-panel" id="progress-panel" hidden>
@@ -87,7 +104,13 @@
           <div class="toolbar-actions">
             <button id="accept-all" class="secondary-button keep-button" type="button" disabled>全部保留</button>
             <button id="reject-all" class="secondary-button discard-button" type="button" disabled>全部抛弃</button>
-            <button id="export-button" class="primary-button" type="button" disabled>输出 Word</button>
+            <div class="export-cluster">
+              <label class="export-checkbox" title="导出时为每处保留的修改添加批注">
+                <input type="checkbox" id="export-comments">
+                <span>保留批注</span>
+              </label>
+              <button id="export-button" class="primary-button" type="button" disabled>导出文档</button>
+            </div>
           </div>
         </div>
 
