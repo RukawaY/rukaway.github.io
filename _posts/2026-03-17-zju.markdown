@@ -9,4 +9,4 @@ company: "Zhejiang University"
 end_date: 
 ---
 **GPA**: 93.64/100 &nbsp; **Ranking**: 1/69 <br>
-I also work as a research intern at ZJU3DV, State Key Lab of CAD&CG, Zhejiang University, focusing on Embodied Simulation and 3D/4D Computer Vision.
+I am also a student intern at ZJU3DV, State Key Lab of CAD&CG, Zhejiang University, focusing 3D/4D Computer Vision.
