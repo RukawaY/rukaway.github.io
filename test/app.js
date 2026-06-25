@@ -1141,7 +1141,7 @@
         Subtype: "Text",
         Rect: [x, clampedY - 6, x + 22, clampedY + 18],
         Contents: PDFHexString.fromText(content),
-        T: PDFHexString.fromText("AI审阅"),
+        T: PDFHexString.fromText("林婉君审阅"),
         M: PDFString.of(dateStr),
         Name: "Comment",
         C: [0.78, 0.37, 0.24],
@@ -1307,7 +1307,7 @@
     const items = acceptedChanges.map((change, slot) => {
       const body = change.reason || "（无修改说明）";
       const paragraph = `<w:p><w:r><w:t xml:space="preserve">${escapeXml(body)}</w:t></w:r></w:p>`;
-      return `<w:comment w:id="${slot}" w:author="AI审阅" w:date="${now}" w:initials="AI">${paragraph}</w:comment>`;
+      return `<w:comment w:id="${slot}" w:author="林婉君审阅" w:date="${now}" w:initials="林">${paragraph}</w:comment>`;
     }).join("");
 
     return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>` +
