@@ -5,7 +5,7 @@ date:   2026-03-16 12:00:00 +00:00
 start_date: 2026-07-01 12:00:00 +00:00
 image: /images/austin.png
 categories: experiences
-role: "(Incoming) Student Intern"
+role: "Research Intern"
 company: "The University of Texas at Austin"
 end_date: "2026-12"
 ---
