@@ -1,0 +1,284 @@
+[
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/01_face_profile_2026_b.jpg",
+  "out": "face26_profile",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/01_alone_lusail_wide_a.jpg",
+  "out": "lusail_alone",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/24copa_tears_bench_a.jpg",
+  "out": "tears24_bench",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/14wc_trophy_stare_bao_a.jpg",
+  "out": "bao14",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/01_behind_no10_lusail_f.jpg",
+  "out": "behind_lusail",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/06wc_serbia_goal_a.jpg",
+  "out": "serbia06",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/08oly_gold_medal_aguero_a.jpg",
+  "out": "medal08_aguero",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/14wc_tears_final_a.jpg",
+  "out": "tears14_medal",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/18wc_iceland_headdown_a.jpg",
+  "out": "iceland18_headdown",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/21copa_trophy_lift_closeup_c.jpg",
+  "out": "copa21_lift_close",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/22wc_trophy_lift_shirt_a.jpg",
+  "out": "wc22_lift_shirt",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/24copa_team_trophy_podium_a.jpg",
+  "out": "copa24_podium",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/26wc_final_medal_tears_b.jpg",
+  "out": "wc26_medal_tears",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/06wc_training_autograph_closeup_a.jpg",
+  "out": "kid06_autograph",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/22fin_trophy_lift_team_a.jpg",
+  "out": "fin22_lift",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/21copa_thrown_in_air_a.jpg",
+  "out": "copa21_air",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/21copa_trophy_kiss_a.jpg",
+  "out": "copa21_kiss",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/21copa_trophy_lift_team_a.jpg",
+  "out": "copa21_lift_team",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/01_behind_nameplate_closeup_g.jpg",
+  "out": "nameplate22",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/22wc_mexico_celebration_b.jpg",
+  "out": "mexico22",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/22wc_netherlands_celebration_b.jpg",
+  "out": "ned22_net",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/22wc_croatia_alvarez_celebration_a.jpg",
+  "out": "croatia22",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/22wc_final_goal_celebration_a.jpg",
+  "out": "final22_goal",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/22wc_final_arms_raised_a.jpg",
+  "out": "final22_arms",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/22wc_carried_shoulders_a.jpg",
+  "out": "wc22_shoulders",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/22wc_trophy_kiss_a.jpg",
+  "out": "wc22_kiss_plinth",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/22wc_bisht_lift_a.jpg",
+  "out": "wc22_bisht_lift",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/22wc_team_lift_a.jpg",
+  "out": "wc22_team_lift",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/22wc_bisht_trophy_kiss_c.jpg",
+  "out": "wc22_bisht_kiss",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/22wc_obelisco_aerial_a.jpg",
+  "out": "obelisco22",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/22wc_parade_bus_trophy_a.jpg",
+  "out": "bus22",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/24copa_walking_off_injured_a.jpg",
+  "out": "copa24_walkoff",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/24copa_bench_tears_consoled_b.jpg",
+  "out": "copa24_consoled",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/24copa_trophy_lift_dimaria_a.jpg",
+  "out": "copa24_dimaria",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/26wc_final_face_walkout_a.jpg",
+  "out": "wc26_walkout_face",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/01_stadium_metlife_b.jpg",
+  "out": "metlife_stadium",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/26wc_final_knees_dejected_a.jpg",
+  "out": "wc26_knees",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/01_fans_metlife_b.jpg",
+  "out": "metlife_fans",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/26wc_final_walking_a.jpg",
+  "out": "wc26_walking",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/01_face_portrait_2026_a.jpg",
+  "out": "face26_portrait",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/08oly_podium_team_c.jpg",
+  "out": "podium08",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/01_behind_no10_metlife_a.jpg",
+  "out": "behind_metlife",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/26wc_england_celebration_a.jpg",
+  "out": "england26",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/26wc_final_runnerup_medal_a.jpg",
+  "out": "wc26_medal_trophy",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/26ret_instagram_letter_a.jpg",
+  "out": "letter26",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/06wc_poster_portrait_b.jpg",
+  "out": "poster06",
+  "w": 2560,
+  "q": 80
+ },
+ {
+  "src": "/tmp/claude-48014/-data-local-ziyuan-rukaway-github-io/ec19fd6c-b4e5-4978-b6c7-48f95074f759/scratchpad/stills/26wc_final_alone_ball_a.jpg",
+  "out": "alone26",
+  "w": 2560,
+  "q": 80
+ }
+]

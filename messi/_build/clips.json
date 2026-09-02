@@ -1,0 +1,303 @@
+[
+ {
+  "name": "c06_assist",
+  "yt": "xDH3unfS3H4",
+  "start": 483.5,
+  "dur": 6.5,
+  "filter": ""
+ },
+ {
+  "name": "c06_bench",
+  "yt": "9dQXiqS56Y4",
+  "start": 1.0,
+  "dur": 6.0,
+  "filter": ""
+ },
+ {
+  "name": "c06_enter",
+  "yt": "9dQXiqS56Y4",
+  "start": 42.0,
+  "dur": 7.0,
+  "filter": ""
+ },
+ {
+  "name": "c06_goal",
+  "yt": "xDH3unfS3H4",
+  "start": 566.0,
+  "dur": 7.6,
+  "filter": ""
+ },
+ {
+  "name": "c06_sub",
+  "yt": "9dQXiqS56Y4",
+  "start": 32.8,
+  "dur": 6.8,
+  "filter": ""
+ },
+ {
+  "name": "c06_touch",
+  "yt": "9dQXiqS56Y4",
+  "start": 73.0,
+  "dur": 5.4,
+  "filter": ""
+ },
+ {
+  "name": "c08_aguero",
+  "yt": "FizVUH-SyP4",
+  "start": 1716.8,
+  "dur": 5.4,
+  "filter": ""
+ },
+ {
+  "name": "c08_goal",
+  "yt": "FizVUH-SyP4",
+  "start": 1023.5,
+  "dur": 9.5,
+  "filter": "crop=1920:864:0:216"
+ },
+ {
+  "name": "c08_medal",
+  "yt": "FizVUH-SyP4",
+  "start": 1791.3,
+  "dur": 4.7,
+  "filter": ""
+ },
+ {
+  "name": "c14_stare",
+  "yt": "Go75btfNyew",
+  "start": 543.7,
+  "dur": 4.4,
+  "filter": ""
+ },
+ {
+  "name": "c14_walk",
+  "yt": "USTBGtyEbRA",
+  "start": 0.8,
+  "dur": 5.6,
+  "filter": ""
+ },
+ {
+  "name": "c18_anthem",
+  "yt": "vGG1w_wBJkg",
+  "start": 107.8,
+  "dur": 3.4,
+  "filter": ""
+ },
+ {
+  "name": "c18_kazan_face",
+  "yt": "9A9lC71BkJo",
+  "start": 420.5,
+  "dur": 4.8,
+  "filter": "crop=1920:843:0:0"
+ },
+ {
+  "name": "c18_nigeria",
+  "yt": "RWgJ4KKn1vM",
+  "start": 8.8,
+  "dur": 3.7,
+  "filter": ""
+ },
+ {
+  "name": "c21_chip",
+  "yt": "KnUas8zdIJ8",
+  "start": 217.3,
+  "dur": 6.2,
+  "filter": "crop=1920:940:0:136"
+ },
+ {
+  "name": "c21_neymar",
+  "yt": "OLZw6P3bcOA",
+  "start": 2.8,
+  "dur": 4.2,
+  "filter": ""
+ },
+ {
+  "name": "c21_whistle",
+  "yt": "jIDa-UtYdIU",
+  "start": 2.6,
+  "dur": 5.8,
+  "filter": ""
+ },
+ {
+  "name": "c22_arms",
+  "yt": "zhEWqfP6V_w",
+  "start": 114.3,
+  "dur": 3.4,
+  "filter": ""
+ },
+ {
+  "name": "c22_bisht",
+  "yt": "2iaE0xHfUro",
+  "start": 520.3,
+  "dur": 6.7,
+  "filter": ""
+ },
+ {
+  "name": "c22_gvardiol",
+  "yt": "gbkgbbKZ1CA",
+  "start": 94.6,
+  "dur": 10.6,
+  "filter": ""
+ },
+ {
+  "name": "c22_mexico",
+  "yt": "xhDzgSY9oCE",
+  "start": 15.4,
+  "dur": 3.8,
+  "filter": "crop=1920:950:0:130"
+ },
+ {
+  "name": "c22_obelisco",
+  "yt": "bBmVVQnocjc",
+  "start": 5.5,
+  "dur": 6.0,
+  "filter": ""
+ },
+ {
+  "name": "c22_pen",
+  "yt": "zhEWqfP6V_w",
+  "start": 12.4,
+  "dur": 3.8,
+  "filter": "crop=1920:950:0:130"
+ },
+ {
+  "name": "c22_save",
+  "yt": "zhEWqfP6V_w",
+  "start": 91.3,
+  "dur": 3.6,
+  "filter": "crop=1920:950:0:130"
+ },
+ {
+  "name": "c22_shoulders",
+  "yt": "2iaE0xHfUro",
+  "start": 531.5,
+  "dur": 3.2,
+  "filter": ""
+ },
+ {
+  "name": "c22f_lift",
+  "yt": "FWRCL4aCEm4",
+  "start": 694.3,
+  "dur": 4.5,
+  "filter": ""
+ },
+ {
+  "name": "c24_lift",
+  "yt": "09kKhdj_Hsc",
+  "start": 958.5,
+  "dur": 4.8,
+  "filter": ""
+ },
+ {
+  "name": "c24_tears",
+  "yt": "P_9nUzsB7jU",
+  "start": 72.0,
+  "dur": 4.0,
+  "filter": ""
+ },
+ {
+  "name": "c26_alone",
+  "yt": "V3dpYRwuMqA",
+  "start": 632.5,
+  "dur": 6.0,
+  "filter": ""
+ },
+ {
+  "name": "c26_austria",
+  "yt": "yPeEQitu_-o",
+  "start": 33.5,
+  "dur": 6.5,
+  "filter": "crop=1920:950:0:130"
+ },
+ {
+  "name": "c26_egypt",
+  "yt": "yPeEQitu_-o",
+  "start": 93.0,
+  "dur": 6.8,
+  "filter": "crop=1920:950:0:130"
+ },
+ {
+  "name": "c26_egypt_whistle",
+  "yt": "-LHb5yN-OzI",
+  "start": 110.2,
+  "dur": 3.6,
+  "filter": "crop=1920:950:0:130"
+ },
+ {
+  "name": "c26_england",
+  "yt": "oB2mK8eJli4",
+  "start": 99.0,
+  "dur": 6.0,
+  "filter": "crop=1920:950:0:130"
+ },
+ {
+  "name": "c26_fans_ba",
+  "yt": "7VDInSIe-Eg",
+  "start": 30.0,
+  "dur": 5.5,
+  "filter": ""
+ },
+ {
+  "name": "c26_letter",
+  "yt": "HOwUjH51vXc",
+  "start": 18.7,
+  "dur": 9.6,
+  "filter": ""
+ },
+ {
+  "name": "c26_medal",
+  "yt": "BjHcO9_hsgs",
+  "start": 569.3,
+  "dur": 5.6,
+  "filter": "crop=1920:800:0:140"
+ },
+ {
+  "name": "c26_save",
+  "yt": "6HaHNYjnghE",
+  "start": 42.5,
+  "dur": 5.5,
+  "filter": "crop=1920:950:0:130"
+ },
+ {
+  "name": "c26_sf_whistle",
+  "yt": "oB2mK8eJli4",
+  "start": 111.0,
+  "dur": 3.4,
+  "filter": "crop=1920:950:0:130"
+ },
+ {
+  "name": "c26_torres",
+  "yt": "6HaHNYjnghE",
+  "start": 67.4,
+  "dur": 4.4,
+  "filter": "crop=1920:950:0:130"
+ },
+ {
+  "name": "c26_tunnel",
+  "yt": "V3dpYRwuMqA",
+  "start": 1096.5,
+  "dur": 6.5,
+  "filter": ""
+ },
+ {
+  "name": "c26_walkoff",
+  "yt": "V3dpYRwuMqA",
+  "start": 1065.5,
+  "dur": 6.5,
+  "filter": ""
+ },
+ {
+  "name": "c26_whistle",
+  "yt": "BjHcO9_hsgs",
+  "start": 527.6,
+  "dur": 4.8,
+  "filter": "crop=1920:800:0:140"
+ },
+ {
+  "name": "c26_yamal",
+  "yt": "BjHcO9_hsgs",
+  "start": 562.5,
+  "dur": 5.5,
+  "filter": "crop=1920:800:0:140"
+ }
+]
