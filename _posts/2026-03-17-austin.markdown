@@ -9,4 +9,4 @@ role: "Research Intern"
 company: "The University of Texas at Austin"
 end_date: "2026-12"
 ---
-I will be a research intern at UT Austin, where I'll be fortunate to be advised by Prof. [Georgios Pavlakos](https://geopavlakos.github.io) and [Qixing Huang](https://www.cs.utexas.edu/~huangqx/).
+I am currently a research intern at UT Austin, where I am fortunate to be advised by Prof. [Georgios Pavlakos](https://geopavlakos.github.io) and [Qixing Huang](https://www.cs.utexas.edu/~huangqx/).
