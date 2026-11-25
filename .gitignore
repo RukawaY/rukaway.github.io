@@ -1,10 +1,6 @@
-_site
 .DS_Store
-.jekyll
-.jekyll-metadata
-.bundle
-.sass-cache
-Gemfile
-Gemfile.lock
-node_modules
-package.json
+
+# Originals used by page/_src/build.py: kept on this machine only, not in git.
+# Back them up yourself; only build.py and the generated files are committed.
+page/_src/images/
+page/_src/fonts/

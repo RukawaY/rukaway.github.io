@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!--
+  Home page of ziyuan-xia.com. All text lives in this file; styles, fonts,
+  icons, images and scripts live under page/assets and page/images.
+  - Formatting and spacing come only from page/assets/css/style.css:
+    no inline styles, and no <br> or empty <p> for spacing.
+  - To add a publication or experience, copy the template at the top of
+    that list. Inside an entry, each <p> is one group of lines.
+  - Icons are CSS classes: <a class="icon i-NAME" ...></a> (see "ICONS" in style.css).
+  - A new section needs an id and a matching link in <nav class="toc">.
+-->
+
+<head>
+  <meta charset="utf-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E00L9PT3V9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-E00L9PT3V9');
+  </script>
+  <title>Ziyuan Xia</title>
+  <meta name="author" content="Ziyuan Xia">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://ziyuan-xia.com/">
+  <link rel="icon" href="page/assets/favicon.ico">
+  <link rel="stylesheet" href="page/assets/css/style.css">
+  <link rel="preload" href="page/assets/fonts/lmroman8-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="page/assets/fonts/lmroman8-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <script defer src="page/assets/js/toc.js"></script>
+</head>
+
+<body>
+  <div class="layout">
+
+    <!-- ========================= TABLE OF CONTENTS ======================= -->
+    <nav class="toc" aria-label="Contents">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+      </ul>
+    </nav>
+
+    <main class="page">
+
+      <!-- ============================== INTRO ============================== -->
+      <header class="intro" id="about">
+        <div class="intro-text">
+          <h1 class="intro-title"><span class="pron" data-pron="[zee-yu-en]" tabindex="0">Ziyuan</span> <span class="pron" data-pron="[sh-i-a]" tabindex="0">Xia</span> | 夏子渊</h1>
+          <p class="intro-email">ziyuanxia.ac@gmail.com</p>
+          <div class="flow">
+            <p>
+              I am currently a final-year undergraduate at <a href="https://www.zju.edu.cn/english/">Zhejiang University</a>,
+              majoring in Software Engineering. I am also a research intern at <a href="https://github.com/zju3dv">ZJU3DV</a>,
+              where I am fortunate to be advised by Prof. <a href="https://pengsida.net">Sida Peng</a> and
+              <a href="https://xzhou.me">Xiaowei Zhou</a>.
+            </p>
+            <p class="notice">
+              I am actively looking for potential Ph.D. opportunities starting from Fall 2027, as well as research
+              internship positions starting from Jan. 2027. Please feel free to contact me if you are interested!
+            </p>
+            <div class="icon-row intro-links">
+              <a class="icon i-email" href="mailto:ziyuanxia.ac@gmail.com" aria-label="Email" title="Email"></a>
+              <a class="icon i-github" href="https://github.com/RukawaY" aria-label="GitHub" title="GitHub"></a>
+              <a class="icon i-scholar" href="https://scholar.google.com/citations?user=GmOyHaoAAAAJ" aria-label="Google Scholar" title="Google Scholar"></a>
+              <a class="icon i-linkedin" href="https://www.linkedin.com/in/ziyuan-xia-259b56392/" aria-label="LinkedIn" title="LinkedIn"></a>
+              <a class="icon i-x" href="https://x.com/ziyuan_xia1110" aria-label="X" title="X"></a>
+            </div>
+          </div>
+        </div>
+        <div class="intro-photo">
+          <img src="page/images/avatar.jpg" alt="profile photo" width="672" height="800" fetchpriority="high">
+        </div>
+      </header>
+
+      <!-- ============================== NEWS =============================== -->
+      <section id="news">
+        <h2>News</h2>
+        <ul class="news">
+          <li><strong>[Jul. 2026]</strong> I started my research internship at UT Austin!</li>
+          <li><strong>[Jun. 2026]</strong> <a href="https://zju3dv.github.io/habitat-gs/">Habitat-GS</a> is accepted to ECCV 2026! See you in Sweden!</li>
+          <li><strong>[Feb. 2025]</strong> I joined <a href="https://github.com/zju3dv">ZJU3DV</a> as a research intern!</li>
+        </ul>
+      </section>
+
+      <!-- ============================= RESEARCH ============================ -->
+      <section id="research">
+        <h2>Research</h2>
+        <p>
+          My research interests lie on the intersection of <strong>Embodied AI</strong> and <strong>Computer Vision</strong>. My primary research goal is
+          to harness state-of-the-art computer vision techniques to tackle problems in embodied intelligence,
+          specifically downstream tasks like embodied navigation and dexterous manipulation.
+        </p>
+      </section>
+
+      <!-- =========================== PUBLICATIONS ========================== -->
+      <section id="publications">
+        <h2>Publications</h2>
+        <div class="entries publications">
+          <!-- New publication: copy this block to the top of the list (newest first).
+          Image: put the original in page/_src/images/publications/, run
+          python3 page/_src/build.py, and use the width/height it prints.
+          <article class="entry">
+            <img class="entry-image" src="page/images/publications/NAME.jpg" alt="SHORT DESCRIPTION"
+              width="W" height="H" loading="lazy" decoding="async">
+            <div class="entry-body">
+              <h3>Paper Title</h3>
+              <p><span class="me">Ziyuan Xia</span>, Coauthor One, Coauthor Two</p>
+              <p class="entry-venue"><em>Full Conference Name (ABBR)</em>, YEAR</p>
+              <div class="icon-row entry-links">
+                <a class="icon i-paper" href="ARXIV URL" aria-label="arXiv" title="arXiv"></a>
+                <a class="icon i-github" href="CODE URL" aria-label="Code" title="Code"></a>
+                <a class="icon i-globe" href="PROJECT URL" aria-label="Project page" title="Project page"></a>
+              </div>
+              <p>One or two sentences about the paper.</p>
+            </div>
+          </article>
+          -->
+          <article class="entry">
+            <img class="entry-image" src="page/images/publications/habitat-gs.jpg" alt="Habitat-GS: mesh avatar vs. drivable Gaussian avatar"
+              width="480" height="304" loading="lazy" decoding="async">
+            <div class="entry-body">
+              <h3>Habitat-GS: A High-Fidelity Navigation Simulator with Dynamic Gaussian Splatting</h3>
+              <p>
+                <span class="me">Ziyuan Xia</span>, Jingyi Xu, Chong Cui, Yuanhong Yu, Jiazhao Zhang, Qingsong Yan, Ni Tao,
+                Junbo Chen, Xiaowei Zhou, Hujun Bao, Ruizhen Hu, Sida Peng
+              </p>
+              <p class="entry-venue"><em>European Conference on Computer Vision (ECCV)</em>, 2026</p>
+              <div class="icon-row entry-links">
+                <a class="icon i-paper" href="https://arxiv.org/abs/2604.12626" aria-label="arXiv" title="arXiv"></a>
+                <a class="icon i-github" href="https://github.com/zju3dv/habitat-gs" aria-label="Code" title="Code"></a>
+                <a class="icon i-globe" href="https://zju3dv.github.io/habitat-gs/" aria-label="Project page" title="Project page"></a>
+              </div>
+              <p>
+                We present Habitat-GS, a navigation-centric embodied AI simulator extended from
+                <a href="https://github.com/facebookresearch/habitat-sim">Habitat-Sim</a> that integrates 3D Gaussian
+                Splatting and drivable gaussian avatars.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============================ EXPERIENCES ========================== -->
+      <section id="experiences">
+        <h2>Experiences</h2>
+        <div class="entries experiences">
+          <!-- New experience: copy this block to the top of the list (newest first).
+          Logo: put the original in page/_src/images/experiences/, run
+          python3 page/_src/build.py, and use the width/height it prints.
+          <article class="entry">
+            <img class="entry-image" src="page/images/experiences/NAME.png" alt="ORGANISATION"
+              width="W" height="H" loading="lazy" decoding="async">
+            <div class="entry-body">
+              <h3>Organisation</h3>
+              <p><em>Role at Organisation</em><br>Mon. YYYY &ndash; Mon. YYYY</p>
+              <p>One or two sentences about the work.</p>
+            </div>
+          </article>
+          -->
+          <article class="entry">
+            <img class="entry-image" src="page/images/experiences/austin.png" alt="The University of Texas at Austin"
+              width="180" height="180" loading="lazy" decoding="async">
+            <div class="entry-body">
+              <h3>The University of Texas at Austin</h3>
+              <p>
+                <em>Research Intern at The University of Texas at Austin</em><br>
+                Jul. 2026 &ndash; Dec. 2026
+              </p>
+              <p>
+                I am currently a research intern at UT Austin, where I am fortunate to be advised by Prof.
+                <a href="https://geopavlakos.github.io">Georgios Pavlakos</a> and
+                <a href="https://www.cs.utexas.edu/~huangqx/">Qixing Huang</a>.
+              </p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <img class="entry-image" src="page/images/experiences/zju.png" alt="Zhejiang University"
+              width="180" height="180" loading="lazy" decoding="async">
+            <div class="entry-body">
+              <h3>Zhejiang University</h3>
+              <p>
+                <em>Bachelor of Software Engineering at Zhejiang University</em><br>
+                Aug. 2023 &ndash; Present
+              </p>
+              <p><strong>GPA</strong>:&nbsp;4.22/4.30 &nbsp; <strong>Ranking</strong>:&nbsp;1/69</p>
+              <p>
+                I also work as a research intern at ZJU3DV, State Key Lab of CAD&amp;CG, focusing on
+                Embodied Simulation and 3D/4D Computer Vision.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+
+</html>
