@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="PERFORM: Physically Executable Hand-Object Interaction Reconstruction from Monocular Manipulation Videos">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords"
+    content="Hand-Object Interaction, Physics-Based Tracking, Reconstruction, Monocular Video, Dexterous Manipulation">
+  <meta name="application-name" content="PERFORM">
+  <title>PERFORM</title>
+  <link rel="icon" type="image/svg+xml" href="./static/images/favicon.svg?v=11260109">
+  <link rel="alternate icon" type="image/png" href="./static/images/favicon.png?v=11260109">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PERFORM">
+  <meta property="og:site_name" content="PERFORM">
+
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/index.css?v=11260109">
+  <script src="./static/js/viewer.js?v=11260109" defer></script>
+  <script src="./static/js/index.js?v=11260109"></script>
+</head>
+
+<body>
+
+<section class="hero hero-cover is-link is-fullheight">
+  <div class="hero-grid" aria-hidden="true">
+    <div class="hero-cell"><video muted loop playsinline preload="none" poster="./static/videos/hero/v6_kitchen_timer.jpg?v=11252303" data-src="./static/videos/hero/v6_kitchen_timer.mp4?v=11252303"></video></div>
+    <div class="hero-cell"><video muted loop playsinline preload="none" poster="./static/videos/hero/v5_pill_bottle.jpg?v=11252303" data-src="./static/videos/hero/v5_pill_bottle.mp4?v=11252303"></video></div>
+    <div class="hero-cell"><video muted loop playsinline preload="none" poster="./static/videos/hero/oi2_c090_apple.jpg?v=11252303" data-src="./static/videos/hero/oi2_c090_apple.mp4?v=11252303"></video></div>
+    <div class="hero-cell"><video muted loop playsinline preload="none" poster="./static/videos/hero/dm_action_camera.jpg?v=11252303" data-src="./static/videos/hero/dm_action_camera.mp4?v=11252303"></video></div>
+    <div class="hero-cell"><video muted loop playsinline preload="none" poster="./static/videos/hero/oi2_c030_spoon.jpg?v=11252303" data-src="./static/videos/hero/oi2_c030_spoon.mp4?v=11252303"></video></div>
+    <div class="hero-cell"><video muted loop playsinline preload="none" poster="./static/videos/hero/ho3d_power_drill.jpg?v=11252303" data-src="./static/videos/hero/ho3d_power_drill.mp4?v=11252303"></video></div>
+    <div class="hero-cell"><video muted loop playsinline preload="none" poster="./static/videos/hero/ho3d_mustard_bottle.jpg?v=11252303" data-src="./static/videos/hero/ho3d_mustard_bottle.mp4?v=11252303"></video></div>
+    <div class="hero-cell"><video muted loop playsinline preload="none" poster="./static/videos/hero/oi2_c032_tongs.jpg?v=11252303" data-src="./static/videos/hero/oi2_c032_tongs.mp4?v=11252303"></video></div>
+    <div class="hero-cell"><video muted loop playsinline preload="none" poster="./static/videos/hero/dm_mic_case.jpg?v=11252303" data-src="./static/videos/hero/dm_mic_case.mp4?v=11252303"></video></div>
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-head">
+    <header class="navbar">
+      <div class="container">
+        <div class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item pl-4 pr-4">
+              <span class="icon">
+                <img src="./static/images/arxiv.svg" alt="arXiv" />
+              </span>
+              <span>Paper<span class="coming-soon">(Coming soon)</span></span>
+            </a>
+            <a class="navbar-item pl-4 pr-4">
+              <span class="icon">
+                <img src="./static/images/pdf.svg" alt="PDF" />
+              </span>
+              <span>Supp<span class="coming-soon">(Coming soon)</span></span>
+            </a>
+            <a class="navbar-item pl-4 pr-4">
+              <span class="icon">
+                <img src="./static/images/github.png" alt="GitHub" />
+              </span>
+              <span>Code<span class="coming-soon">(Coming soon)</span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="hero-body">
+    <div class="container hero-inner">
+      <h1 class="pub-name"><img class="pub-icon" src="./static/images/perform_icon.svg?v=11260109" alt="">PERFORM:</h1>
+      <h1 class="pub-title">
+        <span>Physically Executable Hand-Object Interaction Reconstruction</span>
+        <span>from Monocular Manipulation Videos</span>
+      </h1>
+      <p class="pub-venue">arXiv preprint, 2026</p>
+      <p class="pub-authors">
+        <a href="https://ziyuan-xia.com">Ziyuan Xia</a>
+        <a href="https://scholar.isshikih.top">Yan Xia</a>
+        <a href="https://www.cs.utexas.edu/~huangqx/">Qixing Huang</a>
+        <a href="https://geopavlakos.github.io/">Georgios Pavlakos</a>
+      </p>
+      <p class="pub-affiliation">The University of Texas at Austin</p>
+    </div>
+  </div>
+
+  <div class="hero-foot is-hidden-mobile jump-nav">
+    <nav class="tabs is-toggle is-toggle-rounded is-centered jump-tabs" aria-label="Jump to section">
+      <ul>
+        <li><a href="#lab">On Lab Datasets</a></li>
+        <li><a href="#wild">On In-the-Wild Videos</a></li>
+        <li><a href="#baselines">With Baselines</a></li>
+        <li><a href="#viewer">Interactive Viewer</a></li>
+        <li><a href="#framework">Framework</a></li>
+        <li><a href="#bibtex">Citation</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+<nav class="side-toc" aria-label="Contents">
+  <a href="#tldr" data-target="tldr">Introduction</a>
+  <a href="#lab" data-target="lab">On Lab Datasets</a>
+  <a href="#wild" data-target="wild">On In-the-Wild Videos</a>
+  <a href="#baselines" data-target="baselines">With Baselines</a>
+  <a href="#viewer" data-target="viewer">Interactive Viewer</a>
+  <a href="#framework" data-target="framework">Framework</a>
+  <a href="#bibtex" data-target="bibtex">Citation</a>
+</nav>
+
+<section class="page-section" id="tldr">
+  <h2 class="section-title">TL; DR</h2>
+  <ol class="section-text tldr-list">
+    <li>
+      We present <strong class="kw">PERFORM</strong>, a <strong class="kw">full-stack framework</strong> that reconstructs
+      <strong class="kw">physically executable hand-object interactions</strong> from a
+      monocular RGB video, following the <strong class="kw">"reconstruction - refinement - tracking"</strong> pipeline.
+    </li>
+    <li>
+      We identify three key challenges in <strong class="kw">tracking imperfect reconstructed kinematics</strong>:
+      local noise, inherited reconstruction errors and wrong segments. We address them with
+      three corresponding strategies: <strong class="kw">reference refinement</strong>,
+      <strong class="kw">video-based flow reward</strong>, and <strong class="kw">forward-backward kinematics update mechanism</strong>.
+    </li>
+    <li>
+      PERFORM <strong class="kw">substantially improves</strong>
+      <strong class="kw">success rate</strong>, <strong class="kw">accuracy</strong> and <strong class="kw">robustness</strong>
+      compared with existing pipelines, .
+    </li>
+  </ol>
+  <div class="media">
+    <img class="paper-figure" loading="lazy" decoding="async" src="./static/images/teaser.jpg"
+      alt="Video input, imperfect recovered kinematics and the physically executed interaction for three clips">
+  </div>
+</section>
+
+<section class="page-section page-section--tint" id="lab">
+  <h2 class="section-title">Results on Lab Datasets</h2>
+  <p class="section-text">
+    We show our results on <strong>HO-3D</strong> and <strong>OakInk2</strong> datasets.
+    The GT kinematics are shown only for reference. PERFORM tracks its reconstructed kinematics.
+  </p>
+  <div class="clip-player">
+  <div class="video-shell is-loading" id="lab-video-shell">
+    <div class="video-shell-status" aria-live="polite"></div>
+    <video autoplay muted loop playsinline preload="auto"></video>
+  </div>
+    <div class="clip-list" data-clip-target="lab-video-shell" aria-label="Choose a clip">
+      <button class="clip-item" type="button" data-src="./static/videos/lab/ho3d_mustard_bottle.mp4?v=11252303" data-label="Mustard Bottle">
+        <img loading="lazy" decoding="async" src="./static/images/thumbs/lab_ho3d_mustard_bottle.jpg" alt="">
+        <span class="clip-text"><span class="clip-name">Mustard Bottle</span><span class="clip-set">HO-3D</span></span>
+      </button>
+      <button class="clip-item" type="button" data-src="./static/videos/lab/ho3d_mug.mp4?v=11252303" data-label="Mug">
+        <img loading="lazy" decoding="async" src="./static/images/thumbs/lab_ho3d_mug.jpg" alt="">
+        <span class="clip-text"><span class="clip-name">Mug</span><span class="clip-set">HO-3D</span></span>
+      </button>
+      <button class="clip-item" type="button" data-src="./static/videos/lab/ho3d_sugar_box.mp4?v=11252303" data-label="Sugar Box">
+        <img loading="lazy" decoding="async" src="./static/images/thumbs/lab_ho3d_sugar_box.jpg" alt="">
+        <span class="clip-text"><span class="clip-name">Sugar Box</span><span class="clip-set">HO-3D</span></span>
+      </button>
+      <button class="clip-item" type="button" data-src="./static/videos/lab/oi2_c029_pencil.mp4?v=11252303" data-label="Pencil">
+        <img loading="lazy" decoding="async" src="./static/images/thumbs/lab_oi2_c029_pencil.jpg" alt="">
+        <span class="clip-text"><span class="clip-name">Pencil</span><span class="clip-set">OakInk2</span></span>
+      </button>
+      <button class="clip-item" type="button" data-src="./static/videos/lab/oi2_c014_wineglass.mp4?v=11252303" data-label="Wineglass">
+        <img loading="lazy" decoding="async" src="./static/images/thumbs/lab_oi2_c014_wineglass.jpg" alt="">
+        <span class="clip-text"><span class="clip-name">Wineglass</span><span class="clip-set">OakInk2</span></span>
+      </button>
+      <button class="clip-item" type="button" data-src="./static/videos/lab/oi2_c032_tongs.mp4?v=11252303" data-label="Tongs">
+        <img loading="lazy" decoding="async" src="./static/images/thumbs/lab_oi2_c032_tongs.jpg" alt="">
+        <span class="clip-text"><span class="clip-name">Tongs</span><span class="clip-set">OakInk2</span></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="page-section" id="wild">
+  <h2 class="section-title">Results on In-the-Wild Videos</h2>
+  <p class="section-text">
+    We show results on <strong>in-the-wild internet videos</strong> with diverse objects and manipulation motions to further demonstrate the robustness of PERFORM.
+  </p>
+  <div class="clip-player">
+  <div class="video-shell is-loading" id="wild-video-shell">
+    <div class="video-shell-status" aria-live="polite"></div>
+    <video autoplay muted loop playsinline preload="auto"></video>
+  </div>
+    <div class="clip-list" data-clip-target="wild-video-shell" aria-label="Choose a clip">
+      <button class="clip-item" type="button" data-src="./static/videos/wild/v4_agate_peeler.mp4?v=11252303" data-label="Stone">
+        <img loading="lazy" decoding="async" src="./static/images/thumbs/wild_v4_agate_peeler.jpg" alt="">
+        <span class="clip-text"><span class="clip-name">Stone</span></span>
+      </button>
+      <button class="clip-item" type="button" data-src="./static/videos/wild/dm_key_fob.mp4?v=11252303" data-label="Toy Car">
+        <img loading="lazy" decoding="async" src="./static/images/thumbs/wild_dm_key_fob.jpg" alt="">
+        <span class="clip-text"><span class="clip-name">Toy Car</span></span>
+      </button>
+      <button class="clip-item" type="button" data-src="./static/videos/wild/dm_action_camera.mp4?v=11252303" data-label="Action Camera">
+        <img loading="lazy" decoding="async" src="./static/images/thumbs/wild_dm_action_camera.jpg" alt="">
+        <span class="clip-text"><span class="clip-name">Action Camera</span></span>
+      </button>
+      <button class="clip-item" type="button" data-src="./static/videos/wild/dm_ball_fingers.mp4?v=11252303" data-label="Ball">
+        <img loading="lazy" decoding="async" src="./static/images/thumbs/wild_dm_ball_fingers.jpg" alt="">
+        <span class="clip-text"><span class="clip-name">Ball</span></span>
+      </button>
+      <button class="clip-item" type="button" data-src="./static/videos/wild/v6_kitchen_timer.mp4?v=11252303" data-label="Kitchen Timer">
+        <img loading="lazy" decoding="async" src="./static/images/thumbs/wild_v6_kitchen_timer.jpg" alt="">
+        <span class="clip-text"><span class="clip-name">Kitchen Timer</span></span>
+      </button>
+      <button class="clip-item" type="button" data-src="./static/videos/wild/v5_pill_bottle.mp4?v=11252303" data-label="Pill Bottle">
+        <img loading="lazy" decoding="async" src="./static/images/thumbs/wild_v5_pill_bottle.jpg" alt="">
+        <span class="clip-text"><span class="clip-name">Pill Bottle</span></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="page-section page-section--tint" id="baselines">
+  <h2 class="section-title">Comparison with Baselines</h2>
+  <p class="section-text">
+    We compare PERFORM with two groups of methods. The <strong>physics tracking baselines</strong> ManipTrans, SPIDER, SPIDER+C (SPIDER
+    with its contact guidance), HOIC and DexTrack track the same refined reference as PERFORM, and the two
+    <strong>video-to-physics pipelines</strong> Do As I Do and DexImit track their own reconstructions of the same videos.
+  </p>
+  <h3 class="sub-title">Qualitative Comparison</h3>
+  <div class="clip-player">
+  <div class="video-shell is-loading" id="baseline-video-shell">
+    <div class="video-shell-status" aria-live="polite"></div>
+    <video autoplay muted loop playsinline preload="auto"></video>
+  </div>
+    <div class="clip-list clip-list--cards" data-clip-target="baseline-video-shell" aria-label="Choose a clip">
+      <button class="clip-item" type="button" data-src="./static/videos/base/v6_butane_torch.mp4?v=11252303" data-label="Torch">
+        <img loading="lazy" decoding="async" src="./static/images/thumbs/base_v6_butane_torch.jpg" alt="">
+        <span class="clip-text"><span class="clip-name">Torch</span><span class="clip-set">In-the-Wild</span></span>
+      </button>
+      <button class="clip-item" type="button" data-src="./static/videos/base/ho3d_cracker_box.mp4?v=11252303" data-label="Cracker Box">
+        <img loading="lazy" decoding="async" src="./static/images/thumbs/base_ho3d_cracker_box.jpg" alt="">
+        <span class="clip-text"><span class="clip-name">Cracker Box</span><span class="clip-set">HO-3D</span></span>
+      </button>
+      <button class="clip-item" type="button" data-src="./static/videos/base/v5_marshall_speaker.mp4?v=11252303" data-label="Speaker">
+        <img loading="lazy" decoding="async" src="./static/images/thumbs/base_v5_marshall_speaker.jpg" alt="">
+        <span class="clip-text"><span class="clip-name">Speaker</span><span class="clip-set">In-the-Wild</span></span>
+      </button>
+    </div>
+  </div>
+  <div class="table-head">
+    <h3 class="sub-title">Quantitative Comparison</h3>
+    <div class="table-legend"><span class="swatch-box b1"></span>Best<span class="swatch-box b2"></span>Second</div>
+  </div>
+  <div class="table-wrap">
+    <table class="results-table">
+      <thead>
+        <tr><th rowspan="2" class="method">Method</th><th rowspan="2">Failed<br>cases</th><th colspan="2">Hand (mm)</th>
+          <th colspan="2">Object</th><th colspan="3">Contact</th><th colspan="3">Plausibility</th><th colspan="4">Success rate (%)</th></tr>
+        <tr><th>MPJPE&nbsp;&darr;</th><th>MPVPE&nbsp;&darr;</th><th>CD&nbsp;&darr;</th><th>F@10&nbsp;&uarr;</th><th>Gap&nbsp;&darr;</th>
+          <th>Rate&nbsp;&uarr;</th><th>F1&nbsp;&uarr;</th><th>Pen&nbsp;&darr;</th><th>Float&nbsp;&darr;</th><th>Jerk&nbsp;&darr;</th>
+          <th>SR-B<sub>0</sub>&nbsp;&uarr;</th><th>SR-F<sub>0</sub>&nbsp;&uarr;</th><th>SR-B&nbsp;&uarr;</th><th>SR-F&nbsp;&uarr;</th></tr>
+      </thead>
+      <tbody>
+        <tr class="group-row"><td colspan="16">HO-3D Dataset</td></tr>
+        <tr><td class="method">ManipTrans</td><td>1</td><td>29.5</td><td>31.0</td><td>24.7</td><td>28.2</td><td>19.8</td><td>56</td><td>23.4</td><td class="b2">0.40</td><td>23</td><td>198</td><td>0</td><td>13</td><td>23</td><td>35</td></tr>
+        <tr><td class="method">SPIDER</td><td>1</td><td>31.5</td><td>34.6</td><td>42.9</td><td>15.9</td><td>27.8</td><td>40</td><td>17.8</td><td>0.84</td><td>37</td><td>109</td><td>0</td><td>6</td><td>10</td><td>21</td></tr>
+        <tr><td class="method">SPIDER+C</td><td>5</td><td>36.3</td><td>39.9</td><td>34.9</td><td>20.3</td><td>16.2</td><td>30</td><td>18.1</td><td>0.52</td><td>37</td><td>221</td><td>0</td><td>6</td><td>4</td><td>11</td></tr>
+        <tr><td class="method">HOIC</td><td>2</td><td class="b2">15.8</td><td>&ndash;</td><td class="b2">17.9</td><td class="b2">38.9</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>62</td><td class="b2">40</td><td class="b2">49</td><td class="b2">33</td><td class="b2">50</td></tr>
+        <tr><td class="method">DexTrack</td><td>1</td><td>34.1</td><td>&ndash;</td><td>27.7</td><td>25.5</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>262</td><td>21</td><td>38</td><td>&ndash;</td><td>&ndash;</td></tr>
+        <tr class="sep"><td class="method">Do As I Do</td><td>5</td><td>16.3</td><td class="b2">18.0</td><td>27.3</td><td>29.2</td><td class="b2">14.9</td><td class="b2">67</td><td class="b2">28.6</td><td>1.11</td><td class="b1">0</td><td class="b2">42</td><td>10</td><td>22</td><td>14</td><td>23</td></tr>
+        <tr><td class="method">DexImit</td><td>8</td><td>66.2</td><td>&ndash;</td><td>173.6</td><td>7.5</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>0</td><td>12</td><td>&ndash;</td><td>&ndash;</td></tr>
+        <tr class="ref-row sep"><td class="method">PERFORM reference</td><td></td><td>11.0</td><td>11.0</td><td>16.1</td><td>44.8</td><td>9.7</td><td>88</td><td>39.3</td><td>0.50</td><td>4</td><td>5</td><td></td><td></td><td></td><td></td></tr>
+        <tr class="ours-row"><td class="method">PERFORM</td><td>1</td><td class="b1">11.7</td><td class="b1">11.7</td><td class="b1">12.9</td><td class="b1">49.6</td><td class="b1">11.6</td><td class="b1">83</td><td class="b1">41.6</td><td class="b1">0.39</td><td class="b2">7</td><td class="b1">26</td><td class="b1">70</td><td class="b1">77</td><td class="b1">83</td><td class="b1">89</td></tr>
+        <tr class="group-row"><td colspan="16">OakInk2 Dataset</td></tr>
+        <tr><td class="method">ManipTrans</td><td>0</td><td>30.6</td><td>32.5</td><td>27.1</td><td>27.4</td><td class="b2">8.4</td><td class="b2">78</td><td class="b2">30.2</td><td class="b2">0.71</td><td>6</td><td>177</td><td>10</td><td>28</td><td>20</td><td>35</td></tr>
+        <tr><td class="method">SPIDER</td><td>2</td><td>30.1</td><td>33.0</td><td>35.3</td><td>21.4</td><td>16.6</td><td>39</td><td>9.1</td><td>2.00</td><td>25</td><td>83</td><td>0</td><td>17</td><td>5</td><td>20</td></tr>
+        <tr><td class="method">SPIDER+C</td><td>2</td><td>42.0</td><td>47.4</td><td>47.5</td><td>12.3</td><td>14.7</td><td>59</td><td>10.9</td><td>1.90</td><td>7</td><td>174</td><td>0</td><td>15</td><td>7</td><td>17</td></tr>
+        <tr><td class="method">HOIC</td><td>0</td><td>21.6</td><td>&ndash;</td><td class="b2">16.0</td><td class="b2">42.3</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>50</td><td class="b2">60</td><td class="b2">72</td><td class="b2">51</td><td class="b2">65</td></tr>
+        <tr><td class="method">DexTrack</td><td>0</td><td>28.7</td><td>&ndash;</td><td>27.2</td><td>27.2</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>393</td><td>21</td><td>31</td><td>&ndash;</td><td>&ndash;</td></tr>
+        <tr class="sep"><td class="method">Do As I Do</td><td>4</td><td class="b1">17.4</td><td class="b2">21.2</td><td>38.1</td><td>20.4</td><td>20.6</td><td>69</td><td>24.4</td><td>1.19</td><td class="b1">0</td><td class="b2">31</td><td>0</td><td>25</td><td>17</td><td>42</td></tr>
+        <tr><td class="method">DexImit</td><td>8</td><td>91.4</td><td>&ndash;</td><td>194.9</td><td>0.0</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>0</td><td>11</td><td>&ndash;</td><td>&ndash;</td></tr>
+        <tr class="ref-row sep"><td class="method">PERFORM reference</td><td></td><td>17.7</td><td>19.8</td><td>14.4</td><td>44.9</td><td>7.3</td><td>95</td><td>35.8</td><td>0.67</td><td>6</td><td>7</td><td></td><td></td><td></td><td></td></tr>
+        <tr class="ours-row"><td class="method">PERFORM</td><td>0</td><td class="b2">18.4</td><td class="b1">20.8</td><td class="b1">13.8</td><td class="b1">43.4</td><td class="b1">7.0</td><td class="b1">90</td><td class="b1">40.4</td><td class="b1">0.43</td><td class="b1">0</td><td class="b1">27</td><td class="b1">79</td><td class="b1">89</td><td class="b1">89</td><td class="b1">94</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</section>
+
+<section class="page-section" id="viewer">
+  <h2 class="section-title">Interactive Viewer</h2>
+  <p class="section-text">
+   <strong>Explore PERFORM's simulated hand-object interactions in 4D!</strong> Click the viewer to pause or resume, drag to rotate,
+    scroll to zoom, and move the camera with W (front) / A (left) / S (back) / D (right) / Q (down) / E (up).
+  </p>
+  <div class="clip-player">
+    <div class="viewer-shell is-loading" id="viewer-container">
+      <canvas aria-label="Interactive 3D view of PERFORM's physics rollout"></canvas>
+      <div class="video-shell-status viewer-status" aria-live="polite">Loading the viewer...</div>
+      <div class="viewer-rgb" hidden><video muted loop playsinline preload="auto" aria-label="Input video"></video></div>
+      <div class="viewer-paused" hidden>&#10074;&#10074; Paused</div>
+      <div class="viewer-hint">click to pause / play &middot; drag to rotate &middot; scroll to zoom &middot; W/A/S/D/Q/E to move</div>
+    </div>
+    <div class="clip-list clip-list--cards" data-viewer-target="viewer-container" aria-label="Choose a clip">
+      <button class="clip-item" type="button" data-src="./static/viewer/ho3d_power_drill.bin" data-rgb="./static/viewer/ho3d_power_drill_rgb.mp4?v=11252303" data-label="Power Drill">
+        <img loading="lazy" decoding="async" src="./static/images/thumbs/lab_ho3d_power_drill.jpg" alt="">
+        <span class="clip-text"><span class="clip-name">Power Drill</span><span class="clip-set">HO-3D</span></span>
+      </button>
+      <button class="clip-item" type="button" data-src="./static/viewer/oi2_c015_green_striped_bottle.bin" data-rgb="./static/viewer/oi2_c015_green_striped_bottle_rgb.mp4?v=11252303" data-label="Bottle">
+        <img loading="lazy" decoding="async" src="./static/images/thumbs/lab_oi2_c015_green_striped_bottle.jpg" alt="">
+        <span class="clip-text"><span class="clip-name">Bottle</span><span class="clip-set">OakInk2</span></span>
+      </button>
+      <button class="clip-item" type="button" data-src="./static/viewer/dm_mic_case.bin" data-rgb="./static/viewer/dm_mic_case_rgb.mp4?v=11252303" data-label="Mic Case">
+        <img loading="lazy" decoding="async" src="./static/images/thumbs/wild_dm_mic_case.jpg" alt="">
+        <span class="clip-text"><span class="clip-name">Mic Case</span><span class="clip-set">In-the-Wild</span></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="page-section page-section--tint" id="framework">
+  <h2 class="section-title">Framework</h2>
+  <p class="caption fw-caption">
+    <strong>Overview of PERFORM.</strong> Kinematics reconstruction (left) fits initial hand-object kinematics to the
+    cues of foundation models and a VLM. Reference refinement (middle) smooths the motion, removes penetration, and pulls
+    contact fingers onto the object surface. Forward-backward RL
+    tracking (right) trains forward and backward policies in Isaac Gym to identify and repair wrong segments,
+     with a video-based flow reward to provide auxiliary object motion guidance from the original video.
+  </p>
+  <div class="media fw-overview">
+    <img class="paper-figure" loading="lazy" decoding="async" src="./static/images/overview.jpg" width="2400" height="996"
+      alt="Overview: kinematics reconstruction, reference refinement and forward-backward RL tracking">
+    <div class="fw-buttons" aria-label="Framework details">
+      <div class="fw-anchor fw-anchor--recon">
+        <button class="fw-btn" type="button" data-fw="recon" aria-controls="fw-recon" aria-expanded="false">
+          Reconstruction<svg class="fw-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg>
+        </button>
+      </div>
+      <div class="fw-anchor fw-anchor--refine">
+        <button class="fw-btn" type="button" data-fw="refine" aria-controls="fw-refine" aria-expanded="false">
+          Refinement<svg class="fw-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg>
+        </button>
+      </div>
+      <div class="fw-anchor fw-anchor--track">
+        <button class="fw-btn" type="button" data-fw="flow" aria-controls="fw-flow" aria-expanded="false">
+          Flow Reward<svg class="fw-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg>
+        </button>
+        <button class="fw-btn" type="button" data-fw="fb" aria-controls="fw-fb" aria-expanded="false">
+          Forward-Backward<svg class="fw-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="fw-details" id="fw-details">
+    <div class="fw-details-inner">
+
+      <article class="fw-panel fw-panel--recon" id="fw-recon" data-fw-panel="recon" hidden>
+        <header class="fw-head">
+          <h3 class="fw-title">Kinematics Reconstruction</h3>
+          <button class="fw-close" type="button" aria-label="Close">&times;</button>
+        </header>
+        <div class="fw-top">
+          <img class="fw-figure" loading="lazy" decoding="async" src="./static/images/reconstruction.jpg" width="1600" height="1021"
+            alt="Kinematics reconstruction with vision foundation models and video cues">
+          <div class="fw-text">
+            <p>
+              Vision foundation models give the initial geometry. <strong>Dyn-HaMR</strong> recovers the 4D hand,
+              <strong>SAM 3D Objects</strong> generates the object mesh, and <strong>ProxyPose</strong> anchored by
+              FoundationPose estimates its pose.
+            </p>
+            <p>
+              As the hand and the object come from separate models, an alignment then optimizes the object scale, the hand and
+              a per-frame correction of the object pose against cues from the video: SAM 3.1 object masks, CoTracker3
+              point tracks, WiLoR 2D hand keypoints, and per-finger contact labels from a VLM.
+            </p>
+          </div>
+        </div>
+        <video class="fw-video" muted loop playsinline preload="none" data-src="./static/videos/framework/recon.mp4?v=11252327"
+          poster="./static/videos/framework/recon.jpg?v=11252327" aria-label="Video input to raw kinematics"></video>
+      </article>
+
+      <article class="fw-panel fw-panel--refine" id="fw-refine" data-fw-panel="refine" hidden>
+        <header class="fw-head">
+          <h3 class="fw-title">Contact-Aware Reference Refinement</h3>
+          <button class="fw-close" type="button" aria-label="Close">&times;</button>
+        </header>
+        <p class="fw-lead">
+          The reconstructed kinematics contain <strong>local noise</strong> in hand-object contact and temporal motion. The
+          refinement therefore removes it in three steps, making the kinematics easier to track.
+        </p>
+        <video class="fw-video" muted loop playsinline preload="none" data-src="./static/videos/framework/refine.mp4?v=11252327"
+          poster="./static/videos/framework/refine.jpg?v=11252327" aria-label="Raw kinematics to refined reference"></video>
+      </article>
+
+      <article class="fw-panel fw-panel--flow" id="fw-flow" data-fw-panel="flow" hidden>
+        <header class="fw-head">
+          <h3 class="fw-title">Video-Based Flow Reward</h3>
+          <button class="fw-close" type="button" aria-label="Close">&times;</button>
+        </header>
+        <div class="fw-top fw-top--video">
+          <video class="fw-video fw-video--flow" muted loop playsinline preload="none"
+            data-src="./static/videos/framework/flow.mp4?v=11252327" poster="./static/videos/framework/flow.jpg?v=11252327"
+            aria-label="CoTracker3 tracks in the video and the simulated trajectory"></video>
+          <div class="fw-text">
+            <p>
+              PPO policies track the refined reference in Isaac Gym, rewarded for following its object, hand-object
+              interaction graph and contacts. As these terms compare the simulation only with the reconstructed reference, a
+              policy following them inherits its errors.
+            </p>
+            <p>
+              Therefore, we design a <strong>video-based flow reward</strong> that casts CoTracker3 point tracks from the original video onto the
+              simulated object and compares their motions, so that the simulated object follows the motion in the original video.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="fw-panel fw-panel--fb" id="fw-fb" data-fw-panel="fb" hidden>
+        <header class="fw-head">
+          <h3 class="fw-title">Forward-Backward Kinematics Update</h3>
+          <button class="fw-close" type="button" aria-label="Close">&times;</button>
+        </header>
+        <div class="fw-top">
+          <img class="fw-figure" loading="lazy" decoding="async" src="./static/images/fb_update.jpg" width="2400" height="1242"
+            alt="Forward-backward kinematics update: probing, replacing weak regions and bridging failed regions">
+          <div class="fw-text">
+            <p>
+              Occlusions or ambiguous poses can leave tens of consecutive frames wrong. PERFORM thus trains
+              a <strong>forward</strong> and a <strong>backward</strong> policy that track the reference in
+              opposite directions, identifying and repairing these wrong segments.
+            </p>
+            <p>
+              Every 100 epochs, their rollouts split the reference into <strong>G</strong>ood, <strong>W</strong>eak and
+              <strong>F</strong>ailed regions. A W region is replaced by the rollout that best fits the video, an F region
+              is bridged by a forward and a backward rollout spliced where they meet.
+            </p>
+          </div>
+        </div>
+        <video class="fw-video" muted loop playsinline preload="none" data-src="./static/videos/framework/fb.mp4?v=11260044"
+          poster="./static/videos/framework/fb.jpg?v=11260044" aria-label="Refined reference to physics"></video>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="page-section" id="bibtex">
+  <h2 class="section-title">BibTeX</h2>
+  <pre class="bibtex"><code>TODO</code></pre>
+</section>
+
+<section class="page-section page-section--tint" id="acknowledgements">
+  <h2 class="section-title">Acknowledgements</h2>
+  <p class="section-text">
+    Website template modified from <a href="https://nerfies.github.io/">NeRFies</a>,
+    <a href="https://www.cs.columbia.edu/~huy/scalingup/">Scaling Up Distilling Down</a>,
+    <a href="https://umi-on-legs.github.io/">UMI on Legs</a>,
+    <a href="https://chen-geng.com/rose4d">Birth and Death of a Rose</a>,
+    <a href="https://yanzhelyu.github.io/chord/">CHORD</a>, and
+    <a href="https://zju3dv.github.io/habitat-gs/">Habitat-GS</a>. This website is licensed under a
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+      International License</a>.
+  </p>
+</section>
+
+</body>
+
+</html>

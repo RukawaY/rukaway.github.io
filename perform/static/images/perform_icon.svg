@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20.1 19.3 64.5 71.8" fill="none">
+  <!-- PERFORM mark (2026-11-25): a hand seen from the side, palm up: a full thumb web, short parallel thumb and index on
+       the cube's two vertical sides, a round arc between them under the cube; hand and cube tilted 30 degrees together
+       from the lower left to the upper right -->
+  <g transform="rotate(-30 50 52)">
+    <path d="M 12 61 C 17 60.8 21.5 60.3 25.5 57.5 C 29.75 54.75 32.6 48 33.5 41.25 A 4.26 4.26 0 0 1 42 40.75 L 42 46 A 18 16.5 0 0 0 78 46 L 78 40 A 4.894 4.894 0 0 1 87.75 40.75 L 87.75 46 A 27.75 26.25 0 0 1 77.84 66.11 C 73.24 69.71 67.5 73 58 73.4 C 46 74 36 73.8 26 73.65 C 20 73.5 15 73.4 12 73.4 Z" fill="#fff"/>
+    <path d="M60.0 22.68 L75.0 31.34 L60.0 40.0 L45.0 31.34 Z" fill="#e6e9ef"/>
+    <path d="M45.0 31.34 L60.0 40.0 L60.0 57.32 L45.0 48.66 Z" fill="#a9b1be"/>
+    <path d="M75.0 31.34 L60.0 40.0 L60.0 57.32 L75.0 48.66 Z" fill="#717a8a"/>
+  </g>
+</svg>
