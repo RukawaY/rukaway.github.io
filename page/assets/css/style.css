@@ -394,6 +394,11 @@ h3 {
   font-size: 15px;
 }
 
+/* Papers sit a little further apart than the other entries (--space-5). */
+.publications > * + * {
+  margin-top: 36px;
+}
+
 .publications h3 {
   font-size: 18px;
 }
